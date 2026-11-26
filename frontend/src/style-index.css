@@ -1,0 +1,750 @@
+:root {
+    /* Define o tamanho base para o rem */
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+
+.navbar {
+    background-color: #000;
+    padding: 1rem 5vw;
+    /* Padding responsivo usando rem e vw */
+    display: flex;
+    justify-content: space-between;
+    /* Empurra logo para esquerda e menu para direita */
+    align-items: center;
+    width: 100%;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+}
+
+.btn-hamburguer {
+    align-items: flex-end;
+    justify-content: left;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+}
+
+/* Estilo da Logo */
+.logo {
+    width: 70px;
+    height: auto;
+}
+
+/* Estilo do Contêiner de Links */
+.menu-links {
+    /* Em telas de celular, os links ficam invisíveis ou transformados em um ícone de hambúrguer. */
+    /* Para simplificar, vamos transformá-los em coluna se necessário: */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* Alinha os links à direita do menu */
+    gap: 0.5rem;
+    /* Espaçamento entre os links em rem */
+}
+
+.menu-links a {
+    font-size: 1rem;
+    /* Tamanho da fonte responsivo */
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 400;
+    display: none;
+}
+
+.menu-links a:hover {
+    color: #00ff99;
+}
+
+#carouselExampleIndicators {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+}
+
+.banner-carousel {
+    overflow: hidden;
+}
+
+#carouselExampleIndicators .carousel-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 809px) {
+    #carouselExampleIndicators {
+        width: 106vw;
+        margin-left: calc(50% - 53vw);
+    }
+}
+
+/* Seção Nossos Produtos */
+#nossosProdutos h1 {
+    margin-top: 3vw;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* Carrossel */
+.container-slide {
+    margin: 0 auto;
+    width: 80vw;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.paginas-slide {
+    display: inline-flex;
+    width: max-content;
+    animation: anima 30s linear infinite;
+}
+
+.item-carrossel {
+    display: inline-block;
+    margin: 1vw;
+    margin-top: 6vw;
+}
+
+.paginas-slide img {
+    width: clamp(170px, 40vw, 360px);
+    height: clamp(160px, 38vw, 340px);
+    object-fit: contain;
+}
+
+/* Animação */
+@keyframes anima {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pausa ao passar o mouse */
+.paginas-slide:hover {
+    animation-play-state: paused;
+}
+
+/* Botão */
+.meu-btn .btn {
+    display: flex;
+    margin: 4vw auto 2vw;
+    width: fit-content;
+    font-size: 0.8rem;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #156942;
+    border-color: #156942;
+}
+
+/*Section conserto*/
+#conserto img {
+    width: 100%;
+
+}
+
+#conserto .meu-btn .btn {
+    margin-top: -10vw;
+    position: absolute;
+    margin-left: 6vw;
+}
+a{
+    text-decoration: none;
+}
+
+#NossosServiços h2 {
+    margin-top: 3vw;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.containner {
+    display: block;
+}
+
+#NossosServiços img {
+    display: flex;
+    object-fit: cover;
+    /* Garante que a imagem ocupe 100% da largura e altura do seu div pai (que tem o h-64) */
+    width: 70%;
+    height: auto;
+    margin-left: 20vw;
+
+}
+
+.container-texto,
+.container-texto2 h3 {
+    text-align: center;
+    font-size: 1rem;
+
+}
+
+.container-texto p {
+    text-align: justify;
+    padding: 5vw;
+    font-size: 1.2rem;
+}
+
+#NossosServiços .meu-btn .btn {
+    padding: 2vw;
+    font-size: 3vw;
+    margin: 7vw;
+   margin: 1vw 2vw 0vw 2vw;
+
+}
+
+/*Section localização*/
+.titulo-loc {
+    display: flex;
+    justify-content: center;
+
+}
+
+#icone {
+    width: 7vw;
+    height: auto;
+    object-fit: cover;
+    margin-left: 1vw;
+    margin-bottom: 2vw;
+}
+
+.container-onde-estamos img {
+    display: flex;
+    object-fit: cover;
+    /* Garante que a imagem ocupe 100% da largura e altura do seu div pai (que tem o h-64) */
+    width: 70%;
+    height: auto;
+    margin-left: 12vw;
+}
+
+.txt-endereco p {
+    text-align: justify;
+    padding: 5vw;
+    font-size: 1.2rem;
+}
+
+footer {
+    background-color: #000;
+    padding: 5vw;
+
+}
+
+.container-footer {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10vw;
+}
+
+.rodape-img img {
+    display: none;
+
+}
+
+.container-footer h3 {
+    color: #00ff99;
+    font-size: 1.2rem;
+
+}
+
+.container-tel,
+.container-insta {
+    display: flex;
+    gap: 1vw;
+    color: white;
+}
+
+.container-tel svg {
+    color: #00ff99;
+    margin-top: 0.5vw;
+}
+
+.container-insta svg {
+    color: #00ff99;
+    margin-top: 0.5vw;
+}
+
+.localizacao {
+    color: #fff;
+}
+
+#rodape {
+    text-align: center;
+    margin-top: 5vw;
+    margin-bottom: -5vw;
+}
+
+#rodape p,
+a {
+    font-size: 1.2rem;
+    color: white;
+}
+
+#rodape a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ===================================================== */
+/* Seção de Avaliações / Carrossel Com Setas             */
+/* ===================================================== */
+
+#avalicao-fef {
+    padding-top: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 7rem; /* Aumentado para criar mais espaço até a localização */
+    background-color: #fff;
+}
+
+#avalicao-fef .titulo-loc h2 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    margin-bottom: 2em; /* Reduz de 2.5rem para aproximar dos cards */
+    text-align: center;
+    color: #111;
+}
+
+
+/* Wrapper principal */
+.avaliacoes-carrossel-wrapper {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+/* Container dos cards com margem para não encostar nas setas */
+.avaliacoes-slide-container {
+    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 15px 10px;
+    margin: 0 10px; /* Margem de segurança para afastar das setas */
+}
+
+.avaliacoes-slide-container::-webkit-scrollbar {
+    display: none;
+}
+
+.avaliacoes-slide {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+}
+
+/* Card Individual */
+.avaliacao-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    padding: 2rem;
+    width: 360px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.avaliacao-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Aspas Verde / Ícone "99" */
+.avaliacao-aspas {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: #e6f7f0;
+    color: #1bab73;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+/* Estrelas Douradas */
+.avaliacao-estrelas {
+    color: #f5a623;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+}
+
+/* Texto do Depoimento */
+.avaliacao-texto {
+    font-size: 1.05rem;
+    color: #222222;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    text-align: left;
+}
+
+/* Nome do Cliente */
+.avaliacao-nome {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #111111;
+    margin-bottom: 0.25rem;
+    text-align: left;
+}
+
+/* Informações do serviço */
+.avaliacao-info {
+    font-size: 0.95rem;
+    color: #777777;
+    margin: 0;
+    text-align: left;
+}
+
+/* Estilo das Setas Laterais */
+.seta-carrossel {
+    background: transparent;
+    border: none;
+    font-size: 2.2rem;
+    color: #000;
+    cursor: pointer;
+    padding: 10px;
+    flex-shrink: 0; /* Impede que a seta seja espremida */
+    z-index: 10;
+    transition: color 0.2s ease, transform 0.2s ease;
+    user-select: none;
+}
+
+.seta-carrossel:hover {
+    color: #00ff99;
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .avaliacao-card {
+        width: min(72vw, 280px);
+        min-height: 290px;
+    }
+}
+
+
+@media (max-width: 809px) {
+    .meu-btn .btn,
+    #NossosServiços .meu-btn .btn {
+        font-size: 0.85rem;
+        padding: 0.45rem 0.75rem;
+        margin: 0.75rem 0.5rem;
+    }
+
+    #nossosProdutos .meu-btn {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #nossosProdutos .meu-btn .btn {
+        margin: 0.75rem 0;
+    }
+
+    .avaliacoes-carrossel-wrapper {
+        gap: 0.25rem;
+        padding: 0;
+    }
+
+    .avaliacoes-slide-container {
+        min-width: 0;
+        margin: 0;
+        padding-right: 4px;
+        padding-left: 4px;
+    }
+
+    .seta-carrossel {
+        font-size: 1.4rem;
+        padding: 0.25rem;
+    }
+
+    .navbar {
+        position: sticky;
+    }
+
+    .btn-hamburguer {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 1rem 5vw;
+        background: #000;
+        align-items: stretch;
+    }
+
+    .menu-links.aberto {
+        display: flex;
+    }
+
+    .menu-links a {
+        display: block;
+    }
+}
+
+@media (min-width: 810px) {
+    .navbar {
+        padding: 1rem 5rem;
+        /* Aumenta o padding lateral para desktop */
+        position: sticky;
+    }
+
+    .btn-hamburguer {
+        display: none;
+    }
+
+    .menu-links {
+        /* Muda a direção para que os links fiquem LADO A LADO */
+        flex-direction: row;
+        /* Aumenta o espaçamento entre eles */
+        gap: 1.5rem;
+    }
+
+    .menu-links a {
+        display: block;
+        font-size: 1.2rem;
+        /* Aumenta o texto para telas maiores */
+    }
+
+    #nossosProdutos h1 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .paginas-slide img {
+        margin: 30px;
+        margin-top: 60px;
+        width: 360px;
+        height: 340px;
+    }
+
+    #nossosProdutos .meu-btn .btn {
+        font-size: 1.3rem;
+
+    }
+
+    #conserto img {
+        width: 100%;
+        margin-bottom: 3vw;
+    }
+
+    #conserto .meu-btn .btn {
+        margin-top: -16vw;
+        position: absolute;
+        margin-left: 7vw;
+        font-size: 1.2rem;
+    }
+
+    #containner-principal {
+        justify-content: center;
+        padding: 5vw;
+    }
+
+    #NossosServiços h2 {
+        font-size: 2.5rem;
+        font-weight: 300;
+    }
+
+    .containner1 {
+        display: flex;
+    }
+
+    #NossosServiços img {
+        display: flex;
+        object-fit: cover;
+        /* Garante que a imagem ocupe 100% da largura e altura do seu div pai (que tem o h-64) */
+        width: 30vw;
+        height: auto;
+        margin-left: 10vw;
+
+    }
+
+    .container-texto h3 {
+        margin-top: 2vw;
+        text-align: left;
+        font-size: 1.7rem;
+        padding-left: 1vw;
+    }
+
+    .container-texto p {
+        text-align: justify;
+        padding: 1vw;
+        font-size: 1.5rem;
+
+    }
+
+    .container-texto {
+        width: 40vw;
+        margin-left: 1vw;
+        margin-top: 1vw; /* Alterado de 6vw para 1vw para puxar o botão/conteúdo para cima */
+        padding: 1vw;
+    }
+
+    .containner2 {
+        display: flex;
+    }
+
+    .containner2 .container-img2 {
+        margin-right: 10vw;
+    }
+
+    #NossosServiços .meu-btn .btn {
+        margin-left: 9vw;
+        font-size: 1.2rem;
+        padding: 0.6vw;
+        margin-top: -1vw;
+        margin-bottom: 0;
+    }
+
+    #icone {
+        width: 5vw;
+        object-fit: cover;
+        margin-top: -1vw;
+
+    }
+
+    .container-onde-estamos img {
+        display: flex;
+        object-fit: cover;
+        /* Garante que a imagem ocupe 100% da largura e altura do seu div pai (que tem o h-64) */
+        width: 35vw;
+        height: 17vw;
+        margin-top: 2vw;
+    }
+
+    .container-onde-estamos {
+        display: flex;
+        padding: 5vw;
+        margin-top: -6vw;
+    }
+
+    .container-onde-estamos p {
+        font-size: 1.6rem;
+        line-height: 2;
+        font-weight: 540;
+        margin-top: -3vw;
+    }
+
+    .rodape-img img {
+        display: flex;
+        width: 12vw;
+
+
+    }
+
+    .container-footer h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .container-footer p {
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
+    .container-footer {
+        display: flex;
+        margin-top: -3vw;
+        margin-bottom: -3vw;
+    }
+
+    .contatos {
+        margin-left: 5vw;
+        font-size: 1.2rem;
+    }
+
+    .localizacao {
+        margin-left: 5vw;
+        font-size: 1.2rem;
+    }
+
+    .container-tel svg {
+        width: 1.5vw;
+        height: 1.5vw;
+        margin-bottom: 0.5vw;
+    }
+
+    .container-insta svg {
+        width: 1.5vw;
+        height: 1.5vw;
+        margin-bottom: 0.5vw;
+
+    }
+
+    .container-tel {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 1vw;
+    }
+
+    /* Opcional: Remove a margem padrão do parágrafo, que pode atrapalhar o alinhamento */
+    .container-tel p {
+        margin: 0;
+    }
+
+    .container-tel a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .container-tel a:hover {
+        color: #00ff99;
+    }
+
+    .container-insta {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .container-insta p {
+        margin: 0;
+    }
+
+    .container-insta a{
+        text-decoration: none;
+        color: #fff;
+    }
+    
+    .container-insta a:hover{
+        color: #00ff99;
+    }
+
+}
+

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="F&F Imports">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Detalhes, disponibilidade e informações técnicas dos produtos F&F Imports.">
+    <title>Produto - F&F Imports</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style-index.css">
+    <link rel="stylesheet" href="produto.css">
+    <link rel="stylesheet" href="whatsapp-flutuante.css">
+</head>
+
+<body class="pagina-produto">
+    <nav class="navbar">
+        <a href="index.html" class="logo-link" aria-label="F&F Imports, página inicial">
+            <img src="img/logo-menu.png" alt="Logo F&F Imports" class="logo">
+        </a>
+        <div class="menu-links" id="menu-links">
+            <a href="index.html">Home</a>
+            <a href="catalogo.html">Nossos Produtos</a>
+            <a href="servicos.html">Nossos Serviços</a>
+            <a href="index.html#onde-estamos">Onde estamos</a>
+            <a href="index.html#onde-estamos">Contatos</a>
+            <a href="login.html">Admin</a>
+        </div>
+        <button class="btn-hamburguer" id="btn-mobile" type="button" aria-label="Abrir menu" aria-controls="menu-links"
+            aria-expanded="false">☰</button>
+    </nav>
+
+
+    <main>
+
+        <!-- MENSAGEM DE CARREGAMENTO OU ERRO -->
+        <p id="produto-status" role="status" aria-live="polite">
+            Carregando produto...
+        </p>
+
+        <!-- DETALHES DO PRODUTO -->
+        <section class="produto-detalhe" aria-labelledby="produto-nome" hidden>
+
+            <div class="produto-galeria">
+
+                <div class="produto-miniaturas" id="produto-miniaturas" aria-label="Imagens do produto">
+                </div>
+
+                <div class="produto-imagem-principal">
+                    <img id="produto-imagem" alt="Imagem do produto">
+                </div>
+
+            </div>
+
+            <div class="produto-informacoes">
+
+                <p class="produto-categoria" id="produto-categoria">
+                </p>
+
+                <h1 id="produto-nome"></h1>
+
+                <p id="produto-marca"></p>
+
+                <p class="produto-resumo" id="produto-resumo">
+                </p>
+
+                <p class="produto-preco" id="produto-preco">
+                </p>
+
+                <p class="produto-disponibilidade" id="produto-disponibilidade">
+                </p>
+
+                <a class="produto-cta" id="produto-whatsapp" href="https://wa.me/5561982008929" target="_blank"
+                    rel="noopener noreferrer">
+
+                    Consultar pelo WhatsApp
+
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- DESCRIÇÃO -->
+        <section class="produto-descricao" aria-labelledby="titulo-descricao">
+
+            <div class="produto-conteudo-largo">
+
+                <h2 id="titulo-descricao">Descrição do produto</h2>
+
+                <p id="produto-descricao"></p>
+
+            </div>
+
+        </section>
+
+        <!-- FICHA TÉCNICA -->
+        <section class="produto-ficha" aria-labelledby="titulo-ficha">
+
+            <div class="produto-conteudo-largo">
+
+                <h2 id="titulo-ficha">Ficha técnica</h2>
+
+                <div class="produto-ficha-painel" id="produto-ficha-painel">
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PRODUTOS RELACIONADOS -->
+        <section class="mais-produtos" aria-labelledby="titulo-mais-produtos">
+
+            <div class="produto-conteudo-largo">
+
+                <h2 id="titulo-mais-produtos">Mais produtos</h2>
+
+                <div class="produtos-relacionados" id="produtos-relacionados">
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="container-footer">
+            <div class="rodape-img">
+                <img src="img/logo-footer.png" alt="">
+            </div>
+            <div class="contatos">
+                <h3>Contatos</h3>
+                <div class="container-tel">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16" aria-hidden="true">
+                        <path
+                            d="M13.6 2.3A7.9 7.9 0 0 0 8 .1C3.6.1.1 3.6.1 8c0 1.4.4 2.8 1.1 4L0 16l4.2-1.1a7.9 7.9 0 0 0 3.8 1h.1c4.4 0 7.9-3.6 7.9-8a7.9 7.9 0 0 0-2.4-5.6ZM8 14.5a6.6 6.6 0 0 1-3.4-.9l-.2-.1-2.5.6.7-2.4-.2-.3a6.6 6.6 0 0 1-1-3.5 6.6 6.6 0 0 1 6.6-6.6 6.6 6.6 0 0 1 4.7 1.9 6.6 6.6 0 0 1 1.9 4.7 6.6 6.6 0 0 1-6.6 6.6Zm3.6-4.9c-.2-.1-1.2-.6-1.4-.7-.2-.1-.3-.1-.4.1l-.6.8c-.1.1-.2.1-.4 0-.2-.1-.8-.3-1.6-1-.6-.5-1-1.2-1.1-1.4-.1-.2 0-.3.1-.4l.3-.3c.1-.1.1-.2.2-.3.1-.1 0-.2 0-.4-.1-.1-.5-1.1-.6-1.5-.2-.4-.3-.3-.5-.3H5a.7.7 0 0 0-.5.2c-.2.2-.7.7-.7 1.7s.7 1.9.8 2.1c.1.1 1.4 2.1 3.4 3 .5.2.8.3 1.1.4.5.2.9.1 1.2.1.4-.1 1.2-.5 1.3-.9.2-.5.2-.9.1-1 0-.1-.2-.1-.4-.2Z" />
+                    </svg>
+                    <p><a href="https://wa.me/5561982008929" target="_blank"
+                            rel="noopener noreferrer">(61)98200-8929</a></p>
+                </div>
+                <div class="container-insta">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16" aria-hidden="true">
+                        <path
+                            d="M8 0C5.8 0 5.6 0 4.7.05 3.9.09 3.3.22 2.8.42a3.9 3.9 0 0 0-1.4.9A3.9 3.9 0 0 0 .4 2.8C.2 3.3.1 3.9.05 4.7 0 5.6 0 5.8 0 8s0 2.4.05 3.3c.04.8.17 1.4.37 1.9.2.5.48 1  .92 1.4.44.4.9.7 1.4.9.5.2 1.1.3 1.9.4.9 0 1.1.1 3.3.1s2.4-.1 3.3-.1c.8-.1 1.4-.2 1.9-.4.5-.2 1-.5 1.4-.9.4-.4.7-.9.9-1.4.2-.5.3-1.1.4-1.9 0-.9.1-1.1.1-3.3s-.1-2.4-.1-3.3c-.1-.8-.2-1.4-.4-1.9a3.9 3.9 0 0 0-.9-1.4 3.9 3.9 0 0 0-1.4-.9c-.5-.2-1.1-.3-1.9-.4C10.4 0 10.2 0 8 0Zm0 1.4c2.1 0 2.4 0 3.2.05.8.03 1.2.16 1.5.27.4.15.6.32.9.6.3.28.45.55.6.92.1.28.24.7.27 1.5.04.8.05 1.1.05 3.2s-.01 2.4-.05 3.2c-.03.8-.17 1.2-.27 1.5a2.5 2.5 0 0 1-.6.9 2.5 2.5 0 0 1-.9.6c-.3.1-.7.24-1.5.27-.8.04-1.1.05-3.2.05s-2.4-.01-3.2-.05c-.8-.03-1.2-.16-1.5-.27a2.5 2.5 0 0 1-.9-.6 2.5 2.5 0 0 1-.6-.9c-.1-.3-.24-.7-.27-1.5C1.4 10.4 1.4 10.1 1.4 8s0-2.4.05-3.2c.03-.8.16-1.2.27-1.5.15-.4.32-.6.6-.9.28-.3.55-.45.92-.6.28-.1.7-.24 1.5-.27.8-.04 1.1-.05 3.2-.05Zm0 2.4a4.2 4.2 0 1 0 0 8.4 4.2 4.2 0 0 0 0-8.4Zm0 1.5a2.7 2.7 0 1 1 0 5.4 2.7 2.7 0 0 1 0-5.4Zm4.3-2.6a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z" />
+                    </svg>
+                    <p><a href="https://www.instagram.com/fef.imports/" target="_blank"
+                            rel="noopener noreferrer">@fef.imports</a></p>
+                </div>
+            </div>
+            <div class="localizacao">
+                <h3>📍 Endereço:</h3>
+                <p>SIA Trecho 7, DF BOX A383/384 – Brasília, DF<br>Feira dos Importados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="produto.js"></script>
+    <script src="whatsapp-flutuante.js"></script>
+    <script>
+        const botaoMenu = document.getElementById("btn-mobile");
+        const menuLinks = document.getElementById("menu-links");
+        botaoMenu.addEventListener("click", () => {
+            const aberto = menuLinks.classList.toggle("aberto");
+            botaoMenu.setAttribute("aria-expanded", String(aberto));
+            botaoMenu.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
+        });
+        menuLinks.addEventListener("click", (evento) => {
+            if (evento.target.closest("a")) {
+                menuLinks.classList.remove("aberto");
+                botaoMenu.setAttribute("aria-expanded", "false");
+                botaoMenu.setAttribute("aria-label", "Abrir menu");
+            }
+        });
+        document.addEventListener("keydown", (evento) => {
+            if (evento.key === "Escape") {
+                menuLinks.classList.remove("aberto");
+                botaoMenu.setAttribute("aria-expanded", "false");
+                botaoMenu.setAttribute("aria-label", "Abrir menu");
+                botaoMenu.focus();
+            }
+        });
+    </script>
+</body>
+
+</html>

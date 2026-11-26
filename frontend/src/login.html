@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Admin - Login</title>
+    <link rel="stylesheet" href="style_login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="logo-container">
+        <a href="index.html" aria-label="Voltar para a página inicial">
+            <img src="img/logo.png" alt="Logo F&F Imports" class="main-logo">
+        </a>
+    </header>
+
+    <main class="login-wrapper">
+        <div class="icon-box">
+            <span class="exit-icon">➔</span>
+        </div>
+        
+        <h1>Painel Admin</h1>
+        <p class="subtitle">Entre para gerenciar seus produtos</p>
+
+        <form class="login-card" id="login-form" novalidate>
+            <div class="input-group">
+                <input type="email" id="email" name="email" placeholder="E-mail" autocomplete="email" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="senha" name="senha" placeholder="Senha" autocomplete="current-password" required>
+            </div>
+
+            <p id="login-mensagem" class="login-mensagem" role="alert" hidden></p>
+            
+            <a href="#" id="forgot-password" class="forgot-password">Esqueci minha senha</a>
+
+            <button type="submit" id="btn-entrar" class="btn-entrar">Entrar</button>
+        </form>
+    </main>
+    <script src="login.js"></script>
+
+</body>
+</html>
